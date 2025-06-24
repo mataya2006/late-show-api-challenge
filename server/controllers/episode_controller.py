@@ -11,7 +11,7 @@ def get_episodes():
     episodes = Episode.query.all()
     return jsonify([{
         'id': e.id,
-        'date': e.date.isoformat(), # Convert date to ISO format string
+        'date': e.date.isoformat(), 
         'number': e.number
     } for e in episodes]), 200
 
