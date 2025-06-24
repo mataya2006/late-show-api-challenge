@@ -7,7 +7,7 @@ from server.models.episode import Episode
 
 appearance_bp = Blueprint('appearances', __name__)
 
-@appearance_bp.route('/appearances', methods=['POST']) [cite: 7]
+@appearance_bp.route('/appearances', methods=['POST'])
 @jwt_required() 
 def create_appearance():
     data = request.get_json()
@@ -38,5 +38,3 @@ def create_appearance():
         'guest_id': new_appearance.guest_id,
         'episode_id': new_appearance.episode_id
     }), 201
-
-# Optiona
